@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E216059C-8304-4605-9474-FD51C84D30B0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Farmacia.My.MyApplication</StartupObject>
+    <RootNamespace>Farmacia</RootNamespace>
+    <AssemblyName>Farmacia</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Farmacia.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Farmacia.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgregarCliente.Designer.vb">
+      <DependentUpon>AgregarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarInventario.Designer.vb">
+      <DependentUpon>ConsultarInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlCompras.Designer.vb">
+      <DependentUpon>ControlCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ControlCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlDeInventario.Designer.vb">
+      <DependentUpon>ControlDeInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ControlDeInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlLaboratorios.Designer.vb">
+      <DependentUpon>ControlLaboratorios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ControlLaboratorios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlSuministros.Designer.vb">
+      <DependentUpon>ControlSuministros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSuministros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlVencimiento.Designer.vb">
+      <DependentUpon>ControlVencimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ControlVencimiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlVentas.Designer.vb">
+      <DependentUpon>ControlVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ControlVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laboratorios.Designer.vb">
+      <DependentUpon>Laboratorios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laboratorios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarInventario.Designer.vb">
+      <DependentUpon>ModificarInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Personal.Designer.vb">
+      <DependentUpon>Personal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Personal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealizarCompra.Designer.vb">
+      <DependentUpon>RealizarCompra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RealizarCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealizarVenta.Designer.vb">
+      <DependentUpon>RealizarVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RealizarVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroClientes.Designer.vb">
+      <DependentUpon>RegistroClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroDelPersonal.Designer.vb">
+      <DependentUpon>RegistroDelPersonal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroDelPersonal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroProveedores.Designer.vb">
+      <DependentUpon>RegistroProveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroProveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suministros.Designer.vb">
+      <DependentUpon>Suministros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Suministros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vencimientos.Designer.vb">
+      <DependentUpon>Vencimientos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vencimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Administrador.Designer.vb">
+      <DependentUpon>Ventana_Administrador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Administrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana_Trabajador.Designer.vb">
+      <DependentUpon>Ventana_Trabajador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Trabajador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet10.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet11.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet12.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet13.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet14.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet15.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet16.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet17.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet18.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet19.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet20.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet21.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet22.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet23.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet24.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet25.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet26.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet27.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet28.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet29.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet29.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet30.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet30.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet31.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet32.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet32.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet33.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet33.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet34.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet34.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet35.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet35.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet36.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet36.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet37.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet37.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet38.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet38.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet39.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet39.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet7.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet8.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_BD_CruzDataSet9.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BD_CruzDataSet9.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AgregarCliente.resx">
+      <DependentUpon>AgregarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarInventario.resx">
+      <DependentUpon>ConsultarInventario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlCompras.resx">
+      <DependentUpon>ControlCompras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlDeInventario.resx">
+      <DependentUpon>ControlDeInventario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlLaboratorios.resx">
+      <DependentUpon>ControlLaboratorios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlSuministros.resx">
+      <DependentUpon>ControlSuministros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlVencimiento.resx">
+      <DependentUpon>ControlVencimiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlVentas.resx">
+      <DependentUpon>ControlVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laboratorios.resx">
+      <DependentUpon>Laboratorios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarInventario.resx">
+      <DependentUpon>ModificarInventario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal.resx">
+      <DependentUpon>Personal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealizarCompra.resx">
+      <DependentUpon>RealizarCompra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealizarVenta.resx">
+      <DependentUpon>RealizarVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroClientes.resx">
+      <DependentUpon>RegistroClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroDelPersonal.resx">
+      <DependentUpon>RegistroDelPersonal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroProveedores.resx">
+      <DependentUpon>RegistroProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suministros.resx">
+      <DependentUpon>Suministros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vencimientos.resx">
+      <DependentUpon>Vencimientos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Administrador.resx">
+      <DependentUpon>Ventana_Administrador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana_Trabajador.resx">
+      <DependentUpon>Ventana_Trabajador.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="_BD_CruzDataSet.xsc">
+      <DependentUpon>_BD_CruzDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet.xss">
+      <DependentUpon>_BD_CruzDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet1.xsc">
+      <DependentUpon>_BD_CruzDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet1.xss">
+      <DependentUpon>_BD_CruzDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet10.xsc">
+      <DependentUpon>_BD_CruzDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet10.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet10.xss">
+      <DependentUpon>_BD_CruzDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet11.xsc">
+      <DependentUpon>_BD_CruzDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet11.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet11.xss">
+      <DependentUpon>_BD_CruzDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet12.xsc">
+      <DependentUpon>_BD_CruzDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet12.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet12.xss">
+      <DependentUpon>_BD_CruzDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet13.xsc">
+      <DependentUpon>_BD_CruzDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet13.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet13.xss">
+      <DependentUpon>_BD_CruzDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet14.xsc">
+      <DependentUpon>_BD_CruzDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet14.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet14.xss">
+      <DependentUpon>_BD_CruzDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet15.xsc">
+      <DependentUpon>_BD_CruzDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet15.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet15.xss">
+      <DependentUpon>_BD_CruzDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet16.xsc">
+      <DependentUpon>_BD_CruzDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet16.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet16.xss">
+      <DependentUpon>_BD_CruzDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet17.xsc">
+      <DependentUpon>_BD_CruzDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet17.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet17.xss">
+      <DependentUpon>_BD_CruzDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet18.xsc">
+      <DependentUpon>_BD_CruzDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet18.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet18.xss">
+      <DependentUpon>_BD_CruzDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet19.xsc">
+      <DependentUpon>_BD_CruzDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet19.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet19.xss">
+      <DependentUpon>_BD_CruzDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet2.xsc">
+      <DependentUpon>_BD_CruzDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet2.xss">
+      <DependentUpon>_BD_CruzDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet20.xsc">
+      <DependentUpon>_BD_CruzDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet20.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet20.xss">
+      <DependentUpon>_BD_CruzDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet21.xsc">
+      <DependentUpon>_BD_CruzDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet21.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet21.xss">
+      <DependentUpon>_BD_CruzDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet22.xsc">
+      <DependentUpon>_BD_CruzDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet22.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet22.xss">
+      <DependentUpon>_BD_CruzDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet23.xsc">
+      <DependentUpon>_BD_CruzDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet23.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet23.xss">
+      <DependentUpon>_BD_CruzDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet24.xsc">
+      <DependentUpon>_BD_CruzDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet24.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet24.xss">
+      <DependentUpon>_BD_CruzDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet25.xsc">
+      <DependentUpon>_BD_CruzDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet25.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet25.xss">
+      <DependentUpon>_BD_CruzDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet26.xsc">
+      <DependentUpon>_BD_CruzDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet26.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet26.xss">
+      <DependentUpon>_BD_CruzDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet27.xsc">
+      <DependentUpon>_BD_CruzDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet27.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet27.xss">
+      <DependentUpon>_BD_CruzDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet28.xsc">
+      <DependentUpon>_BD_CruzDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet28.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet28.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet28.xss">
+      <DependentUpon>_BD_CruzDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet29.xsc">
+      <DependentUpon>_BD_CruzDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet29.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet29.xss">
+      <DependentUpon>_BD_CruzDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet3.xsc">
+      <DependentUpon>_BD_CruzDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet3.xss">
+      <DependentUpon>_BD_CruzDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet30.xsc">
+      <DependentUpon>_BD_CruzDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet30.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet30.xss">
+      <DependentUpon>_BD_CruzDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet31.xsc">
+      <DependentUpon>_BD_CruzDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet31.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet31.xss">
+      <DependentUpon>_BD_CruzDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet32.xsc">
+      <DependentUpon>_BD_CruzDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet32.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet32.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet32.xss">
+      <DependentUpon>_BD_CruzDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet33.xsc">
+      <DependentUpon>_BD_CruzDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet33.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet33.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet33.xss">
+      <DependentUpon>_BD_CruzDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet34.xsc">
+      <DependentUpon>_BD_CruzDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet34.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet34.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet34.xss">
+      <DependentUpon>_BD_CruzDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet35.xsc">
+      <DependentUpon>_BD_CruzDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet35.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet35.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet35.xss">
+      <DependentUpon>_BD_CruzDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet36.xsc">
+      <DependentUpon>_BD_CruzDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet36.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet36.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet36.xss">
+      <DependentUpon>_BD_CruzDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet37.xsc">
+      <DependentUpon>_BD_CruzDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet37.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet37.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet37.xss">
+      <DependentUpon>_BD_CruzDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet38.xsc">
+      <DependentUpon>_BD_CruzDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet38.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet38.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet38.xss">
+      <DependentUpon>_BD_CruzDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet39.xsc">
+      <DependentUpon>_BD_CruzDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet39.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet39.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet39.xss">
+      <DependentUpon>_BD_CruzDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet4.xsc">
+      <DependentUpon>_BD_CruzDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet4.xss">
+      <DependentUpon>_BD_CruzDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet5.xsc">
+      <DependentUpon>_BD_CruzDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet5.xss">
+      <DependentUpon>_BD_CruzDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet6.xsc">
+      <DependentUpon>_BD_CruzDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet6.xss">
+      <DependentUpon>_BD_CruzDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet7.xsc">
+      <DependentUpon>_BD_CruzDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet7.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet7.xss">
+      <DependentUpon>_BD_CruzDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet8.xsc">
+      <DependentUpon>_BD_CruzDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet8.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet8.xss">
+      <DependentUpon>_BD_CruzDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet9.xsc">
+      <DependentUpon>_BD_CruzDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="_BD_CruzDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BD_CruzDataSet9.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BD_CruzDataSet9.xss">
+      <DependentUpon>_BD_CruzDataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
